@@ -4,12 +4,24 @@ import { UpdateMapDto } from './dto/update-map.dto';
 import { Repository } from 'typeorm';
 import { Map } from './entities/map.entity';
 
+//map api
+import mapapi from 'src/services/mapApi/mapapi';
+
+
 @Injectable()
 export class MapsService {
   constructor(
     @Inject('MAPS_REPOSITORY')
     private mapRepository: Repository<Map>,
   ) {}
+
+
+
+
+  demochangelocation(){
+    mapapi.conver();
+  }
+
 
 
 

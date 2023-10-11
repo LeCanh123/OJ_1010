@@ -22,6 +22,9 @@ export class Map {
     @Column({ unique: false })
     size!: number 
 
+    @Column({ nullable: true })
+    time!: number 
+
     //nhiều map liên kết 1 category
     @ManyToOne(() => Category, (category) => category.maps)
     categorys!: Category[]

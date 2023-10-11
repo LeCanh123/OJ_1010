@@ -45,14 +45,15 @@ let [data,setData]=useState([])
 
 
   return (
-    <div>
+    <div style={{textAlign:"center"}}>
       <div>Canh</div>
 
-      <div style={{width:"500px"}}>
+      <div style={{width:"100%",textAlign:"center"}}>
       <MapContainer
+
         center={[21.0285, 105.8542]}
         zoom={13}
-        style={{ height: '500px', width: '1000px',marginLeft:"250px" }}
+        style={{ height: '500px', width: '1000px',margin:"auto" ,zIndex:"1"}}
       >
 
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />

@@ -23,7 +23,7 @@ export const databaseProviders = [
           return dataSource;
       }
       catch(err){
-        console.log("err",err);
+        // console.log("err",err);
         
           console.log("Lỗi kết nối database");
 

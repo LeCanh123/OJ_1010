@@ -4,6 +4,7 @@ import { UpdateUserDto } from './dto/update-user.dto';
 import { Repository } from 'typeorm';
 import { User } from './entities/user.entity';
 import MailService from 'src/services/mail';
+import { Map } from '../maps/entities/map.entity';
 
 
 @Injectable()
@@ -11,6 +12,9 @@ export class UsersService {
   constructor(
     @Inject('USER_REPOSITORY')
     private userRepository: Repository<User>,
+    @Inject('MAPS_REPOSITORY')
+    private mapRepository: Repository<Map>,
+
   ) {}
 
 
@@ -20,6 +24,46 @@ export class UsersService {
   }
 
 
+  //kiểm tra gửi thông báo user
+  checkNotification(){
+    //giải nén user
+
+    //tìm thời gian xem thông báo của user
+
+    //lọc thông báo sau thời gian của user xem và trả về
+    const currentTime = new Date();
+    const currentTimeString = currentTime.toString();
+
+    // Lưu currentTimeString vào cơ sở dữ liệu
+    // Lấy currentTimeString từ cơ sở dữ liệu
+
+    const savedTime = new Date(currentTimeString);
+    const elapsedTime = Date.now() - savedTime.getTime();
+    console.log(`Thời gian đã trôi qua: ${elapsedTime}ms`);
+
+
+
+  }
+
+
+  async changeTimeNotification(){
+    //thay đổi thời gian đọc thông báo của user
+try{
+  let changeTimeResult=await this.userRepository
+  .createQueryBuilder()
+  .update(User)
+  .set({ time: "true"})
+  .where("id = :id", { id: "data.id" })
+  .execute()
+
+}
+catch(err){
+
+}
+
+
+
+  }
 
 
 

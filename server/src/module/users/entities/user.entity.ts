@@ -9,5 +9,8 @@ export class User {
     @Column({ unique: true })
     email!: string 
 
+    @Column({nullable:true })
+    time!: string 
+
 }
 
