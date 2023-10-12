@@ -47,7 +47,7 @@ export class MapsController {
 
   @Get("/test")
   async test() {
-    let getallResult=await this.mapsService.demochangelocation();
+    let getallResult=await this.mapsService.getNotificate("");
     return getallResult
   }
 

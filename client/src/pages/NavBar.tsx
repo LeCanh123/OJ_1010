@@ -1,12 +1,17 @@
 import React, { useState } from 'react'
 import "./../Css/Navbar.scss"
 import { useNavigate } from 'react-router-dom';
-
+import MapApi from "./../apis/map"
 
 
 export default function NavBar() {
   const navigate = useNavigate();
   let [notification,setnotification]=useState(false);
+
+async function HandleChangeTimeNotification(){
+  await  MapApi.UserChangeTimeNotification("")
+}
+
 
   return (
 <>
@@ -27,9 +32,15 @@ export default function NavBar() {
           Home</div>
         <div className='col-md-3 mt-3 text-center'
               onClick={()=>{
-                navigate('/about');
+                navigate('/admin');
               }}
-        >About</div>
+        >Admin</div>
+
+<div className='col-md-3 mt-3 text-center'
+              onClick={()=>{
+                navigate('/chart');
+              }}
+        >Chart</div>
 
         </div>
     
@@ -43,7 +54,9 @@ export default function NavBar() {
               }}
         >Login</div>
         <div className='col-6 col-md-3 mt-3' style={{height:"50px"}}>
-          <i className="fa-regular fa-bell" onClick={()=>{setnotification(!notification)}}></i>
+          <i className="fa-regular fa-bell" onClick={()=>{setnotification(!notification);
+          HandleChangeTimeNotification()
+          }}></i>
           
           <div style={{position:"absolute"}}>
             <div style={{position:"absolute",top:"-35px",left:"10px"}}>100</div>

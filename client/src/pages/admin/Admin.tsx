@@ -2,6 +2,13 @@ import React, { useEffect, useState } from 'react'
 import "./../../Css/Admin.scss"
 import AdminApi from "./../../apis/Admin"
 
+
+//lấy vị trí
+import geolib from 'geolib';
+import axios from 'axios';
+
+
+
 export default function Admin() {
     
     //change component
@@ -9,20 +16,53 @@ export default function Admin() {
 
 
 
-    //manage forecast
+    //manage forecast //thêm dự báo
+
+
+useEffect(()=>{
+
+
+
+},[])
+
     let [ForeCastName,setForeCastName]=useState("");
     let [LocationX,setLocationX]=useState("");
     let [LocationY,setLocationY]=useState("");
     let [Size,setSize]=useState("");
+    let [Country,setCountry]=useState("");
+    //lấy vị trí
+    const apiUrl = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${LocationX}&lon=${LocationY}`;
+
     async function handleAddForeCast(){
-        
+        //lấy toạ độ thành phố
+        //10.6786996
+        //106.6826963
+        await   axios.get(apiUrl)
+        .then(async response => {
+        const { city, state, country } = response.data.address;
+        console.log(`City: ${city}`);
+        console.log(`State: ${state}`);
+        console.log(`Country: ${country}`);
+        setCountry(`${city},${country}`)
+
+        })
+        .catch(error => {
+        console.error('Error:', error);
+        });
+
+
         let addForeCastResult=await AdminApi.AddForeCast({
             name:ForeCastName,
             locationx:LocationX,
             locationy:LocationY,
             size:Size,
+            country:Country ,
             CategoryId:selectedOption
         })
+
+
+        
+
     }
 
 

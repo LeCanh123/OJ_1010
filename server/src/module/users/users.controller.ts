@@ -25,14 +25,18 @@ export class UsersController {
   }
 
 
-  // @Get()
-  // findAll() {
-  //   return this.usersService.findAll();
-  // }
+    //thay đổi thời gian xem thông báo
+    @Post("changetime")
+    changeTime(@Body() data) {
+    //giải nén user
+  
+      return this.usersService.changeTimeNotification(data);
+    }
 
-  // @Get(':id')
-  // findOne(@Param('id') id: string) {
-  //   return this.usersService.findOne(+id);
-  // }
+
+
+
+
+
 
 }

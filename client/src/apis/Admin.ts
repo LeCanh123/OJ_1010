@@ -56,6 +56,8 @@ export default {
 
     //forecast
     AddForeCast:async (data:any)=> {
+      console.log("dữ liệu gửi lên",data);
+      
         return await axios.post(import.meta.env.VITE_SERVER_HOST+`maps/admin/create`,{...data})
           .then(res => {
             console.log("ress",res);

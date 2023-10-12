@@ -10,7 +10,7 @@ export class User {
     email!: string 
 
     @Column({nullable:true })
-    time!: string 
+    time!: Date 
 
 }
 

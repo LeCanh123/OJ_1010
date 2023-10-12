@@ -4,6 +4,9 @@ import Map from './pages/Map';
 import Login from './pages/Login';
 import NavBar from './pages/NavBar';
 import Admin from './pages/admin/Admin';
+import Chart from './pages/admin/Chart';
+
+
 
 
 
@@ -14,10 +17,13 @@ export default function App() {
 
 
       <Routes>
+      <Route path="/chart" element={<Chart />} />
       <Route path="/admin" element={<Admin />} />
       <Route path="/" element={<Map />} />
       <Route path="/login" element={<Login />} />
       </Routes>
+
+
     </div>
   )
 }

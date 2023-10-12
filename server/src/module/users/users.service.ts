@@ -43,17 +43,23 @@ export class UsersService {
 
 
 
+
+
+
   }
 
 
-  async changeTimeNotification(){
+  //thay đổi thời gian user xem thông báo
+  async changeTimeNotification(data){
     //thay đổi thời gian đọc thông báo của user
+
 try{
+  const currentTime = new Date();
   let changeTimeResult=await this.userRepository
   .createQueryBuilder()
   .update(User)
-  .set({ time: "true"})
-  .where("id = :id", { id: "data.id" })
+  .set({ time: currentTime})
+  .where("id = :id", { id: "33378f43-671e-11ee-8359-b07b254d818e" })
   .execute()
 
 }

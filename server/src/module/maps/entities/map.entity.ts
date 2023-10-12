@@ -22,8 +22,11 @@ export class Map {
     @Column({ unique: false })
     size!: number 
 
-    @Column({ nullable: true })
-    time!: number 
+    @Column({ nullable: true }) //thời gian đăng
+    time!: Date 
+
+    @Column({ nullable: true }) //tên tỉnh thành phố
+    country!: string 
 
     //nhiều map liên kết 1 category
     @ManyToOne(() => Category, (category) => category.maps)
