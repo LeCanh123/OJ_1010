@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import NavBar from './pages/NavBar';
 import Admin from './pages/admin/Admin';
 import Chart from './pages/admin/Chart';
+import Footer from './pages/Footer';
 
 
 
@@ -23,7 +24,7 @@ export default function App() {
       <Route path="/login" element={<Login />} />
       </Routes>
 
-
+      <Footer></Footer>
     </div>
   )
 }

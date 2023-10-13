@@ -50,10 +50,12 @@ let [data,setData]=useState([])
 
 
   return (
-    <div style={{textAlign:"center"}}>
+    <div className='container' >
       <div>Canh</div>
 
-      <div style={{width:"100%",textAlign:"center"}}>
+<div className="row">
+<div className="col col-md-9">
+<div style={{width:"100%",textAlign:"left",position:"relative",left:"-11px"}}>
       <MapContainer
 
         center={[21.0285, 105.8542]}
@@ -73,6 +75,82 @@ let [data,setData]=useState([])
 
       </MapContainer>
       </div>
+</div>
+<div className="col col-md-3 " style={{backgroundColor:"#CCFFFF",overflow:"scroll"}}>
+  <div className='ms-3'>
+  <div>Danh Sách Category lựa chọn</div>
+  <div className='mt-1' style={{backgroundColor:"#FFFFCC"}}>Động Đất</div>
+  <div className='mt-1' style={{backgroundColor:"#FFFFCC"}}>Sóng Thần</div>
+  </div>
+ 
+</div>
+</div>
+
+<div className='row'>
+ <div className="col" style={{backgroundColor:"#99CCFF"}}>
+Bảng ghi chú
+<div className="row">
+  <div className="col col-md-4" style={{backgroundColor:"#FFFF66"}}>
+    <div className="row">
+          <div className="col col-md-1">
+          <img style={{width:"30px",height:"30px"}} src="https://banner2.cleanpng.com/20180427/dxq/kisspng-2018-papua-new-guinea-earthquake-computer-icons-pa-earthquake-logo-5ae2ee4497b9e9.5998974415248215726215.jpg" alt="" />
+          </div>
+          <div className="col col-md-11 mt-1">Động Đất</div>
+    </div>
+
+  </div>
+  <div className="col col-md-4" style={{backgroundColor:"#FFFF66"}}>
+    <div className="row">
+          <div className="col col-md-1">
+          <img style={{width:"30px",height:"30px"}} src="https://banner2.cleanpng.com/20180427/dxq/kisspng-2018-papua-new-guinea-earthquake-computer-icons-pa-earthquake-logo-5ae2ee4497b9e9.5998974415248215726215.jpg" alt="" />
+          </div>
+          <div className="col col-md-11 mt-1">Động Đất 1</div>
+    </div>
+
+  </div>
+  <div className="col col-md-4" style={{backgroundColor:"#FFFF66"}}>
+    <div className="row">
+          <div className="col col-md-1">
+          <img style={{width:"30px",height:"30px"}} src="https://banner2.cleanpng.com/20180427/dxq/kisspng-2018-papua-new-guinea-earthquake-computer-icons-pa-earthquake-logo-5ae2ee4497b9e9.5998974415248215726215.jpg" alt="" />
+          </div>
+          <div className="col col-md-11 mt-1">Động Đất 2</div>
+    </div>
+
+  </div>
+</div>
+
+
+<div className="row mt-2">
+  <div className="col col-md-4" style={{backgroundColor:"#FFFF66"}}>
+    <div className="row">
+          <div className="col col-md-1">
+          <img style={{width:"30px",height:"30px"}} src="https://banner2.cleanpng.com/20180427/dxq/kisspng-2018-papua-new-guinea-earthquake-computer-icons-pa-earthquake-logo-5ae2ee4497b9e9.5998974415248215726215.jpg" alt="" />
+          </div>
+          <div className="col col-md-11 mt-1">Động Đất</div>
+    </div>
+
+  </div>
+  <div className="col col-md-4" style={{backgroundColor:"#FFFF66"}}>
+    <div className="row">
+          <div className="col col-md-1">
+          <img style={{width:"30px",height:"30px"}} src="https://banner2.cleanpng.com/20180427/dxq/kisspng-2018-papua-new-guinea-earthquake-computer-icons-pa-earthquake-logo-5ae2ee4497b9e9.5998974415248215726215.jpg" alt="" />
+          </div>
+          <div className="col col-md-11 mt-1">Động Đất 1</div>
+    </div>
+
+  </div>
+  <div className="col col-md-4" style={{backgroundColor:"#FFFF66"}}>
+    <div className="row">
+          <div className="col col-md-1">
+          <img style={{width:"30px",height:"30px"}} src="https://banner2.cleanpng.com/20180427/dxq/kisspng-2018-papua-new-guinea-earthquake-computer-icons-pa-earthquake-logo-5ae2ee4497b9e9.5998974415248215726215.jpg" alt="" />
+          </div>
+          <div className="col col-md-11 mt-1">Động Đất 2</div>
+    </div>
+
+  </div>
+</div>
+ </div>
+</div>
 
 
 

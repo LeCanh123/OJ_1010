@@ -19,24 +19,34 @@ async function HandleChangeTimeNotification(){
 <div className='row'>
     <div className='col-6 col-md-10 bg-success' style={{height:"75px"}}>
         <div className='row'>
-        <div className='col-md-3 mt-0'>
-          <img src='https://sachet.ndma.gov.in/imm/NDMA%20Logo.png' 
+        <div className='col-md-7 mt-0'>
+          <div className="row">
+            <div className="col col-md-2" style={{textAlign:"right"}} >
+            <img src='http://vndms.dmc.gov.vn/app/images/front/sprite-header-sp.png' 
           style={{width:"70px",height:"70px"}}  
           ></img>
+            </div>
+            <div className="col col-md-9 mt-2" style={{textAlign:"left",position:"relative",left:"-20px",top:"3px"}}>
+              <div>HỆ THỐNG CẢNH BÁO THIÊN TAI VIỆT NAM</div>
+              <div>VIETNAM DISASTERS MONITORING SYSTERM</div>
+            </div>
+          </div>
+
+
         </div>
-        <div className='col-md-3 mt-3 text-center'
+        <div className='col-md-1 mt-3 text-center'
         onClick={()=>{
           navigate('/');
         }}
         >
           Home</div>
-        <div className='col-md-3 mt-3 text-center'
+        <div className='col-md-1 mt-3 text-center'
               onClick={()=>{
                 navigate('/admin');
               }}
         >Admin</div>
 
-<div className='col-md-3 mt-3 text-center'
+<div className='col-md-1 mt-3 text-center'
               onClick={()=>{
                 navigate('/chart');
               }}

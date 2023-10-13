@@ -22,7 +22,7 @@ export default function Login() {
 
 
   return (
-    <div>
+    <div className='container'>
               {/* facebook */}
  <div>
       {isLoggedIn ? (

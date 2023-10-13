@@ -116,11 +116,11 @@ useEffect(()=>{
 
 
   return (
-    <div className='containers'>
+    <div className='container'>
         <div className='row'>
-        <div className='col-md-2 mt-3'>
-            <div className='mt-3' onClick={()=>{SetSelectComponent(1)}}>Category Manage</div>
-            <div className='mt-3' onClick={()=>{SetSelectComponent(2)}}>Add Forecast</div>
+        <div className='col-md-2 mt-3' style={{backgroundColor:"#6699FF"}}>
+            <div className='mt-3' style={{backgroundColor:"#99CCFF"}} onClick={()=>{SetSelectComponent(1)}}>Category Manage</div>
+            <div className='mt-3' style={{backgroundColor:"#99CCFF"}} onClick={()=>{SetSelectComponent(2)}}>Add Forecast</div>
         </div>
 
 

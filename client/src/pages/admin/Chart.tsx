@@ -35,14 +35,17 @@ function generatePDF() {
 
   return (
 
-    <div className='container' id="divToPrint">
-         <XYPlot width={300} height={300}>
+    <div className='container' >
+      <div id="divToPrint">
+      <XYPlot width={300} height={300}>
       <VerticalGridLines />
       <HorizontalGridLines />
       <XAxis />
       <YAxis />
       <VerticalBarSeries data={data}  barWidth={0.8}  />
     </XYPlot>
+      </div>
+
 
     <h1>Export PDF</h1>
       <button onClick={generatePDF}>Generate PDF</button>
